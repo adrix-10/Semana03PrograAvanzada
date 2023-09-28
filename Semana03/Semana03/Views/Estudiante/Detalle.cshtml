@@ -1,0 +1,24 @@
+﻿@model Estudiante
+@{
+    ViewData["Title"] = "Detalle";
+}
+
+<h1>Detalle del Estudiante</h1>
+<!--Formas de Mostrar la fecha-->
+@*h2>@DateTime.Now.ToShortDateString()</h2>*@
+<h2>@DateTime.Now.ToString("dd/MM/yyyy")</h2>
+
+<div class="container">
+    <div class="card">
+        <div class="card-title">@ViewBag.Titulo</div>
+        <div class="card-body">XXX
+            <div class="card-text">Nombre Completo: @Model.Nombre @Model.Apellido</div>
+            <div class="card-text">Edad: @Model.Edad</div>
+            <br />
+            <br />
+            <div class="footer">
+                <span class="badge bg-info">@Model.Carrera</span>
+            </div>
+        </div>
+    </div>
+</div>

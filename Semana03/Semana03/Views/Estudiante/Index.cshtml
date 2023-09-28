@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Crear un Estudiante</h1>
+<br />
+<br />
+<!--Parametros: 1. Acción, 2. Controlador, 3 Metodo de Envio-->
+@using (Html.BeginForm("CrearEstudiante", "Estudiante", FormMethod.Post))
+{
+        <div class="container">
+            <div class="mb-3">
+                <label for="nombre" class="col-form-label">Nombre:</label>
+                <input type="text" name="nombre" class="form-control" placeholder="Digite el nombre del estudiante">
+            </div>
+            <div class="mb-3">
+                <label for="apellido" class="col-form-label">Apellido:</label>
+                <input type="text" name="apellido" class="form-control" placeholder="Digite el apellido del estudiante">
+            </div>
+            <div class="mb-3">
+                <label for="edad" class="col-form-label">Edad:</label>
+                <input type="number" name="edad" class="form-control" min="17">
+            </div>
+            <div class="mb-3">
+                <label for="carrera" class="col-form-label">Carrera:</label>
+                <select name="carrera" class="form-select" aria-label="Default select example">
+                    <option selected value="Sistemas">Sistemas</option>
+                    <option value="Medicina">Medicina</option>
+                    <option value="Administración">Administración</option>
+                </select>
+            </div>
+
+            <input type="submit" class="btn-primary" value="Crear">
+
+        </div>
+}
+
